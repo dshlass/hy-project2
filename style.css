@@ -14,10 +14,10 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 Fonts
 Nunito (Google Fonts)
 Libre Baskerville (Google Fonts)
-
+font-family: 'Nunito', sans-serif;  font-weight: 400 or 900
+font-family: 'Libre Baskerville', serif; font-style: italic;
 Icons
 Font Awesome
-
 Colours
 Purple #6e45e2 hsla(256, 73%, 58%, 0.2)
 Pink #ed145b   hsla(340, 86%, 50%, 0.2)
@@ -40,10 +40,21 @@ html {
   font-size: 62.5%;
 } 
 
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+.italics {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
 ul, li,
 h1, h2, 
 h3, h4, 
-h5, h6 {
+h5, h6,
+p {
   padding: 0;
   margin: 0;
 } 
@@ -55,6 +66,9 @@ li {
 a {
   text-decoration: none;
   display: inline-block;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 img {
@@ -65,39 +79,125 @@ img {
 /************************************ Section 2: Header *********************************************/
 
 header {
-  background-image: linear-gradient(45deg, hsla(223, 60%, 50%, 0.5) 30%, hsla(256, 73%, 58%, 0.5), hsla(340, 86%, 50%, 0.7)), linear-gradient(rgba(250,250,250,0.5), rgba(250,250,250, 0.5)), url('./assets/image-1.jpeg');
+  background-image: linear-gradient(45deg, hsla(223, 60%, 50%, 0.3) 20%, 
+					hsla(256, 73%, 58%, 0.5) 66%, hsla(340, 86%, 50%, 0.7)), 
+					linear-gradient(rgba(250,250,250,0.5), rgba(250,250,250, 0.5)), 
+					url('./assets/image-1.jpeg');
   color: white;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 1px;
 }
 
-.container {
-  height: 60px;
-  max-width: 100%;
-  /*background: ;*/
+nav { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+} 
+
+.logo-container {
+  display: inline-block;
+  min-width: 60px;
+  margin-left: 5%;
+  margin-right: 15%;
 }
 
 nav ul {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+}
+
+ul li {
+  position: relative;
+   margin-right:40px;
+}
+
+ul li a {
+ padding: 10px 5px;
+}
+
+ul li:hover .nav-hover,
+ul li:active .nav-hover {
+  display: block;
+}
+
+ .nav-hover {  /*Link hover code */
+  content: '';
+  width:2px;
+  background-color: rgba(250,250,250, 0.5);
+  position:absolute;
+  top: -55px;
+  bottom: 45px;
+  left: 50%;
+  display: none;
+ }
+
+ .right-container {
+  display: flex;
+  margin-right: 5%;
+  margin-left: 11%;
   justify-content: space-between;
-  align-content: center;
-  align-items: baseline;
-  padding-top: 20px;
+  align-items: center;
+  font-weight: 400;
+} 
+
+.right-container a{
+  font-weight: 400;
+} 
+
+.right-container i:first-child {
+  margin-right: 35px;
 }
 
-ul li:first-child {
-  margin-left: 2%;
-  margin-right: 15%;
+.right-container i {
+  margin-right: 10px;
 }
 
-ul li:last-child {
-  margin-right: 2%;
-  margin-left: 15%;
+.header-wrapper {
+  text-align: center;
+  margin-top: 20vh;
+}
+
+h1 {
+  font-size: 6rem;
+  padding: 0 30%;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.header-wrapper a {
+  margin-top: 50px;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  background: var(--purple);
+  border-radius: 30px;
 }
 
 
 
 
+
+
+
+
+
+
+/* 
+.england {
+  position: relative;
+}
+.england img{
+  position: absolute;
+  width: 20px;
+  top: 0;
+  border: 1px solid white;
+  border-radius: 30px;
+} */
