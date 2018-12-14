@@ -31,7 +31,7 @@ Grey #f1f8fc
  --pink: #ed145b;
  --blue: #0d4ef7;
  --black: #171717;
- /*--grey: #f1f8fc;*/
+ --lightgrey: #f1f8fc;
  --grey: #b9b9b9;
 }
 
@@ -75,7 +75,36 @@ a {
 
 img {
   display: block;
-  max-width: 100%;  
+  width: 100%;  
+}
+
+ .section-title:before { 
+  content: '';
+  width:2px;
+  background-color: #989898;
+  position:absolute;
+  top: -50px;
+  bottom: 30px;
+  left: 50%;
+  display: block;
+ }
+
+h1 {
+  font-size: 6rem;
+}
+
+ h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 0 7%;
+  margin: 0 30%;
+}
+
+h3 {
+  position: relative;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 
 /************************************ Section 2: Header *********************************************/
@@ -214,16 +243,6 @@ margin: 0 28%;
   border-radius: 30px;
 }
 
-h1 {
-  font-size: 6rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  text-transform: uppercase;
-}
-
 .center-flex a {
   margin-top: 50px;
   text-transform: uppercase;
@@ -277,34 +296,18 @@ h3 {
   color: rgba(250,250,250,0.5);
 }
 
+
+
 /************************************ Section 3: Our Projects *********************************************/
 .our-projects {
   margin: 0 auto;
   text-align: center;
-  position: relative;
+  margin-bottom: 10%;
 }
-
- .page-separation { 
-  content: '';
-  width:2px;
-  background-color: #989898;
-  position:absolute;
-  top: 112%;
-  bottom: -15%;
-  left: 50%;
-  display: block;
- }
 
 .color-pink {
   color: var(--pink);
   margin-bottom: 1%;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 400;
-  padding: 0 7%;
-  margin: 0 30%;
 }
 
 .our-projects p {
@@ -328,12 +331,30 @@ h2 {
 .filter ul li a {
   margin: 15px;
   padding: 5px 20px;
-  background: var(--pink);
+  color: var(--grey);
   border-radius: 25px;
 }
 
+ul li a.no-hover {
+  background: var(--pink);
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.filter ul li:hover a,
+.filter ul li:active a {
+  margin: 15px;
+  padding: 5px 20px;
+  background: var(--pink);
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
 .gallery-container {
-  margin: 1% 0 10%;
+  margin-top: 1%;
 }
 
 .gallery {
@@ -390,9 +411,161 @@ li.large-image {
   padding: 0;
 }
 
+/************************************ Section 4: Our Expert ********************************************/
+
+.our-expert {
+  text-align: center;
+}
+
+.color-pink {
+  color: var(--pink);
+  margin-bottom: 1%;
+}
+
+.our-expert p {
+  font-family: 'Libre Baskerville', serif; 
+  font-style: italic;
+  color: var(--grey);
+  padding: 0 9%;
+}
+
+/*FIX BAD CODE*/
+.fix {                /*FIX BAD CODE*/
+    margin:1% 30%;     /*FIX BAD CODE*/
+}   /*FIX BAD CODE*/
+/*FIX BAD CODE*/
+
+.expert-container {
+  margin-top: 1%;
+}
+
+.expert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.expert figure {
+  position: relative;  
+}
+
+.expert h3 {
+  font-size: 1.5rem;
+  text-transform: none;
+}
 
 
+.expert li {
+ max-width: 20%;
+}
+
+/*BAD CODE MUST CHANGE!!!!*/
+/*BAD CODE MUST CHANGE!!!!*/
+.expert figure img {    /*BAD CODE MUST CHANGE!!!!*/
+  height: 515.38px; 
+  border-radius: 15px;    /*BAD CODE MUST CHANGE!!!!*/
+}
+/*BAD CODE MUST CHANGE!!!!*/
+/*BAD CODE MUST CHANGE!!!!*/
+
+.center-image {
+  margin: 0 20px;
+}
+
+.expert figure:hover figcaption {
+  display: block;
+}
 
 
+.expert figcaption {
+  display: none;
+  position: absolute;
+  background: var(--pink);
+  opacity: 0.8;
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    border-radius: 15px;
 
-/************************************ Section 4: Our Expert ********************************************
+}
+
+.social-hover {
+  padding: 0 60px;
+}
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+    margin-top: 257.67px;
+
+}
+
+.social a {
+  padding: 10px;
+}
+
+.social i {
+  font-size: 1.75rem;
+  color: white;
+}
+
+.score {
+  width: calc(60% + 40px);
+  margin: 0 auto;
+}
+.score ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.score ul li {
+  width: 45%;
+  text-align: left;
+}
+
+.score p {
+  padding: 10px 0 0 75px;
+}
+
+.score-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.marketing {
+  width: 75%;
+}
+
+.design {
+  width: 85%;
+}
+
+.deliver {
+  width: 68%;
+}
+
+.field {
+  width: 80%;
+}
+
+.color {
+  height: 10px;
+  background: linear-gradient(to right, red, blue);
+  border-radius: 20px;  
+}
+
+.score-bar {
+  width: 100%;
+  height: 10px;
+  background: var(--lightgrey);
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
