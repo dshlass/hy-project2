@@ -415,6 +415,7 @@ li.large-image {
 
 .our-expert {
   text-align: center;
+  margin-bottom: 5%;
 }
 
 .color-pink {
@@ -431,7 +432,7 @@ li.large-image {
 
 /*FIX BAD CODE*/
 .fix {                /*FIX BAD CODE*/
-    margin:1% 30%;     /*FIX BAD CODE*/
+    margin:1% 30% 2%;     /*FIX BAD CODE*/
 }   /*FIX BAD CODE*/
 /*FIX BAD CODE*/
 
@@ -499,7 +500,7 @@ li.large-image {
   display: flex;
   justify-content: space-around;
   align-items: center;
-    margin-top: 257.67px;
+  margin-top: 257.67px;
 
 }
 
@@ -569,3 +570,157 @@ li.large-image {
   margin: 20px 0;
 }
 
+/************************************ Section 5: Blog and News ********************************************/
+
+.blue-background {
+  background: var(--lightgrey);
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.blog-news {
+  text-align: center;
+  width: calc(60% + 40px);
+  margin: 0 auto;
+
+}
+
+.color-pink {
+  color: var(--pink);
+  margin-bottom: 1%;
+}
+
+.blog-news p {
+  font-family: 'Libre Baskerville', serif; 
+  font-style: italic;
+  color: var(--grey);
+  padding: 0 9%;
+}
+
+.blog-news h2 {
+  margin: 0 20%;
+}
+
+.blog-post {
+  margin-top: 4%;
+}
+
+.blog-post ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-post ul li {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+}
+
+.blog-post ul li:hover {
+  box-shadow: 3px 7px 38px 3px rgba(0,0,0,0.2);
+}
+
+.blog-post ul li:hover h2{
+  color: var(--pink);
+}
+
+.bottom-blog-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.bottom-blog {
+  background: #fff;
+}
+
+.bottom-blog h3 {
+  margin: 0;
+  padding: 10% 0;
+}
+
+.bottom-blog h2 {
+  padding: 0;
+  margin: 0 0 5%;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.bottom-blog p {
+  padding: 0;
+  font-size: 1.17rem;
+  line-height: 2.25rem;
+  margin-bottom: 5%;
+}
+
+
+.writer {
+  display:flex;
+  align-items: center;
+  padding-bottom: 8%;
+}
+
+.photo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+.first {
+    display: inline;
+    position: absolute;
+    bottom: -10px;
+    height: 150%;
+    width: auto;
+  }
+
+.second {
+    display: inline;
+    position: absolute;
+    bottom: -25px;
+    left: -1px;
+    height: 150%;
+    width: auto;
+
+}
+
+.third {
+    display: inline;
+    position: absolute;
+    left: -35px;
+    bottom: -10px;
+    margin: 0 auto;
+    height: 150%;
+    width: auto;
+}
+
+.by-who {
+  font-style: italic;
+  text-transform: none;
+}
+
+
+
+
+/*    #triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;
+      position: absolute;
+    }
+
+
+    #parallelogram {
+      width: 150px;
+      height: 100px;
+      transform: skew(-20deg);
+      background: red;
+      position: absolute;
+    }*/
+  
