@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Nunito:400,900" rel="stylesheet">
     <link type="image/png" href="./assets/logos/favicon.png" rel="icon">
-
-
 </head>
+
 <body>
   <header>
-    <div class="wrapper">
-      <div class="flex-container vertical">  <!-- Main Flexbox: Column -->
+    <div class="header-wrapper"> <!-- Start of Section 1: Header -->
+      <div class="flex-container vertical">  <!-- Header Main Flexbox: Column -->
         <div class="flex-container horizontal">
           <div class="logo-container"> <!-- First Row of Column: Logo, Navigation and Search/Country Content -->
            <img src="./assets/logos/logo-cronus.png" alt="Cronos logo is the letter C that has is repeated in four sizes from big to small.">
@@ -47,7 +47,7 @@
           </nav>
           <div class="right-container"> <!-- Search, Country and Language -->
             <i class="testing fas fa-search fa-2x"></i>
-            <div class="england">
+            <div class="england"> <!-- England Flag SVG-->
               <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-gb" viewBox="0 0 512 512">
                 <defs>
                   <clipPath id="a">
@@ -64,26 +64,26 @@
                 </g>
               </svg>
             </div>
-            <a href="#something">EN</a>
+            <a href="#language">EN</a> <!-- Language -->
           </div>
         </div>
-        <div class="flex-container horizontal" > <!-- Second Row of Column: Contact, Headers and Date? -->
-          <div class="left-middle">
+        <div class="flex-container horizontal" > <!-- Second Row of Middle Column: Contact, Headers and Date? -->
+          <div class="left-middle"> <!-- Contact -->
             <p>info@moontheme.net</p>
             <p>+3423 4455 3333</p>
            </div>
-          <div class="mid-middle">
+          <div class="mid-middle"> <!-- Headers -->
             <h1>We provide the best<span class ="italics"> service</span> for business</h1>
             <h3>Business Communication is the sharing</h3>
             <a href="#learnmore">Explore more</a>
           </div>
-          <div class="right-middle">
-            <p class="strikethrough">01</p>
+          <div class="right-middle"> <!-- Date -->
+            <p class="strikethrough">01</p> <!-- Strikethrough -->
             <p>02</p>
             <p>03</p>
           </div>
         </div>
-        <div class="scroll"> <!-- Third Row of Column: Scroll Style Sugar -->
+        <div class="scroll"> <!-- Third Row of Second Column: Scroll-->
           <i class="fade1 fas fa-circle"></i>
           <i class="fade2 fas fa-circle"></i>
           <i class="fas fa-circle"></i>
@@ -91,29 +91,28 @@
         </div>
       </div>    
     </div>
-    <div class="page-separation"></div>
-  </header>
+  </header> <!-- End of Section 1: Header -->
   
-  <main>
-    <section class="our-projects">
+  <main> <!-- Start of Main content -->
+    <section class="our-projects"> <!-- Start of Section 2: Our Projects -->
       <h3 class="color-pink section-title">Our projects</h3>
       <h2>Discover the <span class="italics">most fascinating</span> projects for our clients</h2>
       <p>Veritatis et quasi architect° beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fiigit</p>
-      <div class="filter">
+      <div class="filter"> <!-- Projects Photo Filtering -->
         <ul>
-          <li><a class="no-hover" href="#filter">All</a></li>
+          <li><a class="no-hover" href="#filter">All</a></li>  <!-- This element has hover state as default -->
           <li><a href="#filter">Consulting</a></li>
           <li><a href="#filter">Finance</a></li>
           <li><a href="#filter">Marketing</a></li>
         </ul>
-      </div>
-      <div class="gallery-container">
-        <ul class="gallery">
-          <li>
+      </div> <!-- End of photo filtering -->
+      <div class="gallery-container"> <!-- Start of the Gallery --> 
+        <ul class="gallery"> 
+          <li> 
             <figure>
-              <img src="./assets/image-4.jpeg" alt="">
-              <figcaption>
-                <div class= "plus"></div>
+              <img src="./assets/image-4.jpeg" alt=""> 
+              <figcaption> <!-- Only visible on hover state -->
+                <div class= "plus"></div> <!-- Empty Element to create a plus in the div -->
                 <h3>Branding Marketing</h3>
                 <p>Magni dolores eos qui ratione</p>
               </figcaption>
@@ -190,103 +189,79 @@
             </figure>
           </li>
         </ul>
-      </div>
-    </section>
+      </div>  <!-- End of the Gallery --> 
+    </section> <!-- End of Section 2: Our Projects -->
 
-    <section class="our-expert">
+    <section class="our-expert"> <!-- Start of Section 3: Our Expert -->
       <h3 class="color-pink section-title">Our expert</div></h3>
       <h2>Our team of experienced professionals to <span class="italics">get fast profit</span></h2>
       <p class="fix">Veritatis et quasi architect° beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fiigit</p>
-      <div class="expert-container">
-        <ul class="expert">
+      <div class="expert-container">  
+        <ul class="expert-gallery"> <!-- Start of the Experts Gallery --> 
           <li>
-            <figure>
+            <figure> <!-- First Expert -->
               <img src="./assets/image-12.jpg" alt="">
-              <figcaption class="social-hover">
-                <ul class="social">
-                  <li>
+              <figcaption class="social-hover"> <!-- Only visible on hover state -->
+                <div class="social"> <!-- Flex container for the social links - consider removing ul for simplicity -->
                     <a href="#facebook">
                       <i class="fab fa-facebook-f"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#twitter">
                       <i class="fab fa-twitter"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#googleplus">
                       <i class="fab fa-google-plus-g"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#instagram">
                       <i class="fab fa-instagram"></i>
                     </a>
-                  </li>
-                </ul>
+                </div>
               </figcaption>
             </figure>
-            <h3 class="color-pink">Joht Herry</h3>
+            <h3 class="color-pink">Joht Herry</h3> <!-- Name and Position -->
             <p>CEO Cronus Business</p> 
           </li>
           <li class="center-image">
-            <figure>
+            <figure> <!-- Second Expert -->
               <img src="./assets/image-13.jpg" alt="">
               <figcaption class="social-hover">
-                <ul class="social">
-                  <li>
+                <div class="social"> <!-- Flex container for the social links - consider removing ul for simplicity -->
                     <a href="#facebook">
                       <i class="fab fa-facebook-f"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#twitter">
                       <i class="fab fa-twitter"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#googleplus">
                       <i class="fab fa-google-plus-g"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#instagram">
                       <i class="fab fa-instagram"></i>
                     </a>
-                  </li>
-                </ul>
+                </div>
               </figcaption>
             </figure>
             <h3 class="color-pink">Hellen Marry</h3>
             <p>Creative director</p>
           </li>
           <li>
-            <figure>
+            <figure>  <!-- Third Expert -->
               <img src="./assets/image-14.jpg" alt="">
               <figcaption class="social-hover">
-                <ul class="social">
-                  <li>
+                <div class="social"> <!-- Flex container for the social links -->
                     <a href="#facebook">
                       <i class="fab fa-facebook-f"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#twitter">
                       <i class="fab fa-twitter"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#googleplus">
                       <i class="fab fa-google-plus-g"></i>
                     </a>
-                  </li>
-                  <li>
                     <a href="#instagram">
                       <i class="fab fa-instagram"></i>
                     </a>
-                  </li>
-                </ul>
+                </div>
               </figcaption>
             </figure>
             <h3 class="color-pink">David jame</h3>
@@ -294,13 +269,13 @@
           </li>
         </ul>
       </div>
-      <div class="score">
+      <div class="score"> <!-- Start of the score section -->
         <ul>
           <li class="score-section">
             <h3>Marketing Online</h3>
             <p>75%</p>
-            <div class="score-bar">
-              <div class="marketing color"></div>
+            <div class="score-bar"> <!-- Empty div for gray background -->
+              <div class="marketing color"></div> <!-- Empty div for gradient bar effect -->
             </div>
           </li>
           <li class="score-section">
@@ -325,16 +300,16 @@
             </div>
           </li>
         </ul>
-      </div>
-    </section>
+      </div> <!-- End of the score section -->
+    </section> <!-- End of Section 3: Our Expert -->
 
-    <section class="blue-background">
-      <div class="blog-news">
+    <section class="blog-background"> <!-- Start of Section 4: Blog & News -->
+      <div class="blog-news"> <!-- Blog & News wrapper -->
         <h3 class="color-pink section-title">Blog &amp news</h3>
         <h2>Keep always updated <span class="italics">with our fresh</span> blog posts</h2>
-        <div class="blog-post">
-          <ul>
-            <li>
+        <div class="blog-post"> <!-- Blog post wrapper -->
+          <ul> <!-- Start of the Blog -->
+            <li> <!-- First Blog Post -->
               <div class="top-blog">
                 <img src="./assets/image-15.jpg" alt="">
               </div>
@@ -343,15 +318,15 @@
                   <h3 class="color-pink">August 6, 2017</h3>
                   <h2>Facilisis rutrum aenean</h2>
                   <p>In eros a justo facilisis rutrum. Aenean id ullamcorper libero. Vestibulum imperdiet </p>
-                  <div class="writer">
+                  <div class="writer"> <!-- Bottom of blog flex container -->
                     <div class="photo">
                       <img class="first" src="./assets/image-18.jpg" alt="">
                     </div>
                     <h3 class="by-who">By Jont kook</h3>
                   </div>
-                 </div>
+                </div>
               </div>
-            </li>
+            </li> <!-- Second Blog Post -->
             <li class="center-image">
               <div class="top-blog">
                 <img src="./assets/image-16.jpg" alt="">
@@ -370,8 +345,8 @@
                 </div>
               </div>
             </li>
-            <li>
-              <div class="top-blog">
+            <li> <!-- Third Blog Post -->
+              <div class="top-blog"> 
                 <img src="./assets/image-17.jpg" alt="">
               </div>
               <div class="bottom-blog">
@@ -388,19 +363,85 @@
                 </div>
               </div>
             </li>
-          </ul>
+          </ul><!-- End of the Blog -->
+        </div>  <!-- End of Blog Post wrapper -->
+      </div> <!-- End of Blog & News wrapper -->
+    </section> <!-- End of Section 4: Blog & News -->
+  </main> <!-- End of Main content -->
+  
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-flex">
+        <div class="left">
+          <div class="footer-logo">
+            <img src="./assets/logos/logo-cronus.png" alt="Cronos logo is the letter C that has is repeated in four sizes from big to small.">
+          </div>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explkabo. Nemo enim ipsam</p>
+          <p>Business Address</p>
+          <h4>London Oxford Street, 012 United Kingdom.</h4>
+          <div class="footer-contact">
+            <div class="half">
+              <p>Business phone:</p>
+              <h4>+032 3456 7890</h4>
+            </div>
+            <div class="half">
+              <p>Business email:</p>
+              <h4>Business@moontheme.net</h4>
+            </div>
+          </div>
+          <div class="footer-social">
+            <a href="#facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#googleplus">
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+            <a href="#instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+         </div>
+        </div>
+        <div class="center">
+          <h3 class="footer-title">Twitter feed</h3>
+          <a href="">
+            <div class="center-social">
+              <i class="fab fa-twitter"></i>
+              <div class="twitter-lineup">
+                <h3>Commodo ultricies</h3>
+                <p>@Moontheme</p>
+              </div>
+            </div>
+          </a>
+          <p>Nam ac elit a ante commodo tristique. Condimentum a vehicula a, hendrerit ac nisi Lorem ipsum dolor http://t.con/3lG2RTn3 </p>
+          <div class="clock-date">
+             <i class="far fa-clock"></i>
+             <p>Sep. 29, 2017</p>
+          </div>
+         
+        </div>
+        <div class="right">
+           <h3 class="footer-title">Opening hours</h3>
+          <p>Arthitecto beatae vitae dicta sunt ipsam voluptatem quia voluptas sit aspematur</p>
+          <div class="store-hours">
+            <h4>mon - tues:</h4>
+            <h4>6:00 am - 10:00 am</h4>
+            <h4>wednes - thurs</h4>
+            <h4>8:00 am - 6:00 pm</h4>
+            <h4>fri</h4>
+            <h4>3:00 pm - 8:00 pm</h4>
+            <h4>sun:</h4>
+            <h4>closed</h4>
+          </div>
         </div>
       </div>
-    </section>
+      
 
-  </main>
-  <footer>
-    
+    </div>
+    <p class="copyright">Copyright &copy; Cronus - all rights reserved. Made by Moontheme</p>
   </footer>
 
 </body>
-
-<!-- 
-     <div id="triangle-up"></div>
-      <div id="parallelogram"></div> -->
 </html>

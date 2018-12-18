@@ -35,7 +35,7 @@ Grey #f1f8fc
  --grey: #b9b9b9;
 }
 
-/************************************ Section 1: General Settings *********************************************/
+/************************************ General Settings *********************************************/
 
 html {
   font-size: 62.5%;
@@ -75,7 +75,8 @@ a {
 
 img {
   display: block;
-  width: 100%;  
+  width: 100%; 
+  object-fit: cover; 
 }
 
  .section-title:before { 
@@ -107,7 +108,7 @@ h3 {
   text-transform: uppercase;
 }
 
-/************************************ Section 2: Header *********************************************/
+/************************************ Section 1: Header *********************************************/
 
 header {
   background-image: linear-gradient(45deg, hsla(223, 60%, 50%, 0.3) 20%, 
@@ -119,12 +120,11 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 1px;
   position: relative;
   margin-bottom: 10%;
 }
 
-.wrapper {
+.header-wrapper {
   width: 90%;
   margin: 0 auto;
   padding-top: 50px;
@@ -274,7 +274,7 @@ margin: 0 28%;
 
 .scroll {
   align-self: center;
-   margin-top: 17%;
+   margin-top: 15%;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
@@ -297,8 +297,7 @@ margin: 0 28%;
 }
 
 
-
-/************************************ Section 3: Our Projects *********************************************/
+/************************************ Section 2: Our Projects *********************************************/
 .our-projects {
   margin: 0 auto;
   text-align: center;
@@ -333,6 +332,7 @@ margin: 0 28%;
   padding: 5px 20px;
   color: var(--grey);
   border-radius: 25px;
+  /*transition: box-shadow 0.5s;*/
 }
 
 ul li a.no-hover {
@@ -342,13 +342,18 @@ ul li a.no-hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.filter ul li:hover a,
-.filter ul li:active a {
+.filter ul li a:hover {
   margin: 15px;
   padding: 5px 20px;
   background: var(--pink);
   color: #fff;
   border-radius: 25px;
+  box-shadow: 3px 7px 38px 3px rgba(0,0,0,0.2);
+    transition: box-shadow 0s;
+
+}
+
+.filter ul li:active a {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
 }
@@ -371,7 +376,8 @@ li.large-image {
  width: 40%;
 }
 
-.gallery figure:hover figcaption {
+.gallery figure:hover figcaption,
+.gallery figure:active figcaption {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -411,7 +417,7 @@ li.large-image {
   padding: 0;
 }
 
-/************************************ Section 4: Our Expert ********************************************/
+/************************************ Section 3: Our Expert ********************************************/
 
 .our-expert {
   text-align: center;
@@ -440,46 +446,44 @@ li.large-image {
   margin-top: 1%;
 }
 
-.expert {
+.expert-gallery {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 5%;
 }
 
-.expert figure {
+.expert-gallery figure {
   position: relative;  
 }
 
-.expert h3 {
+.expert-gallery h3 {
   font-size: 1.5rem;
   text-transform: none;
 }
 
 
-.expert li {
+.expert-gallery li {
  max-width: 20%;
+display: flex;
+flex-direction: column;
 }
 
-/*BAD CODE MUST CHANGE!!!!*/
-/*BAD CODE MUST CHANGE!!!!*/
-.expert figure img {    /*BAD CODE MUST CHANGE!!!!*/
-  height: 515.38px; 
-  border-radius: 15px;    /*BAD CODE MUST CHANGE!!!!*/
+
+.expert-gallery figure img {
+  border-radius: 15px;
+  height: 530px;   /*Sorry can't figure out how to make a proper size - Don't judge me*/
 }
-/*BAD CODE MUST CHANGE!!!!*/
-/*BAD CODE MUST CHANGE!!!!*/
 
 .center-image {
   margin: 0 20px;
 }
 
-.expert figure:hover figcaption {
+.expert-gallery figure:hover figcaption {
   display: block;
 }
 
 
-.expert figcaption {
+.expert-gallery figcaption {
   display: none;
   position: absolute;
   background: var(--pink);
@@ -489,8 +493,7 @@ li.large-image {
   bottom: 0;
   left: 0;
   right: 0;
-    border-radius: 15px;
-
+  border-radius: 15px;
 }
 
 .social-hover {
@@ -570,9 +573,9 @@ li.large-image {
   margin: 20px 0;
 }
 
-/************************************ Section 5: Blog and News ********************************************/
+/************************************ Section 4: Blog & News ********************************************/
 
-.blue-background {
+.blog-background {
   background: var(--lightgrey);
   padding-top: 10%;
   padding-bottom: 10%;
@@ -582,7 +585,6 @@ li.large-image {
   text-align: center;
   width: calc(60% + 40px);
   margin: 0 auto;
-
 }
 
 .color-pink {
@@ -685,7 +687,6 @@ li.large-image {
     left: -1px;
     height: 150%;
     width: auto;
-
 }
 
 .third {
@@ -702,6 +703,145 @@ li.large-image {
   font-style: italic;
   text-transform: none;
 }
+
+
+
+
+/************************************ Section 4: Blog & News ********************************************/
+
+footer {
+  background: #000;
+  padding-top: 5%;
+  color: white;
+}
+
+footer p{
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: var(--grey);
+  margin-bottom: 2%;
+}
+
+h4 {
+  font-size: 1.17rem;
+  font-weight: 400;
+    margin-bottom: 2%;
+}
+
+.footer-wrapper {
+  width: calc(60% + 40px);
+  margin: 0 auto;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 5%;
+}
+
+.footer-contact {
+  display: flex;
+
+}
+
+.half {
+  width: 45%;
+}
+
+.footer-social {
+  display: flex;
+
+}
+
+.footer-social a {
+  margin-top: 1%;
+  padding: 12px;
+}
+
+.footer-social a:first-child {
+  padding-left: 0;
+}
+
+.footer-social i {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.footer-title {
+  margin-bottom: 11%;
+}
+
+.center-social {
+  display: flex;
+  margin-bottom: 12%;
+}
+
+.center-social i {
+  width: 8%;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.twitter-lineup {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-social p,
+.center-social h3 {
+  margin: 0;
+}
+
+.clock-date {
+  display: flex;
+  align-items: baseline; 
+}
+
+.clock-date i {
+  margin-right: 10px;
+  transform: scale(-1, 1);
+}
+
+.center p {
+  padding-right: 8%;
+}
+
+.left p {
+  padding-right: 5%;
+}
+
+.copyright {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 40px;
+}
+
+.store-hours {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  /*width: 90%;*/
+}
+.store-hours h4{
+  margin: 3% 0;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+.store-hours h4:nth-of-type(2n) {
+  text-align: right;
+}
+
+
+
+
+
 
 
 
