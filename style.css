@@ -33,9 +33,10 @@ Grey #f1f8fc
  --black: #171717;
  --lightgrey: #f1f8fc;
  --grey: #b9b9b9;
+ --alphawhite: rgba(250,250,250, 0.5);
 }
 
-/************************************ General Settings *********************************************/
+/************************************ General Settings and Stylistic Sugar *********************************************/
 
 html {
   font-size: 62.5%;
@@ -44,11 +45,6 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-}
-
-.italics {
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic;
 }
 
 ul, li,
@@ -60,6 +56,16 @@ p {
   padding: 0;
   margin: 0;
 } 
+
+.italics {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+.color-pink {
+  color: var(--pink);
+  margin-bottom: 1%;
+}
 
 li {
   list-style: none;
@@ -79,17 +85,6 @@ img {
   object-fit: cover; 
 }
 
- .section-title:before { 
-  content: '';
-  width:2px;
-  background-color: #989898;
-  position:absolute;
-  top: -50px;
-  bottom: 30px;
-  left: 50%;
-  display: block;
- }
-
 h1 {
   font-size: 6rem;
 }
@@ -108,12 +103,98 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 2%;
+}
+
+p {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--grey);
+}
+
+.our-project p,
+.blog-news p {
+  font-family: 'Libre Baskerville', serif; 
+}
+
+.our-projects p,
+.our-expert p,
+.blog-news p {
+  padding: 0 9%;
+}
+
+.header-wrapper, /* Margin Wrapper to Center various */
+.our-projects,
+.score,
+.blog-news,
+.bottom-blog-wrapper,
+.third, 
+.footer-wrapper {
+    margin: 0 auto;
+}
+
+.flex-container,
+.mid-middle,
+.scroll,
+.our-projects,
+.our-expert,
+.blog-news,
+.copyright {
+  text-align: center;
+}
+
+.nav-hover,
+.section-title:before,
+.strikethrough:before,
+.plus:before,
+.plus:after {
+    content: '';
+    position:absolute;
+}
+
+.nav-hover,
+.section-title:before,
+.plus:before,
+.plus:after {
+  width: 2px;
+}
+
+.section-title:before { 
+  background-color: #989898;
+  top: -50px;
+  bottom: 30px;
+  display: block;
+}
+
+.section-title:before,
+.nav-hover,
+.strikethrough:before,
+.plus:before,
+.plus:after  {
+ left: 50%;
+}
+
+.plus:before,
+.plus:after { 
+  background-color: #fff;
+  top: 33%;
+  bottom:57%;
+ }
+
+.plus:after { 
+  transform: rotate(90deg);
+ }
+
 /************************************ Section 1: Header *********************************************/
 
 header {
   background-image: linear-gradient(45deg, hsla(223, 60%, 50%, 0.3) 20%, 
           hsla(256, 73%, 58%, 0.5) 66%, hsla(340, 86%, 50%, 0.7)), 
-          linear-gradient(rgba(250,250,250,0.5), rgba(250,250,250, 0.5)), 
+          linear-gradient(var(--alphawhite), var(--alphawhite)), 
           url('./assets/image-1.jpeg');
   color: #FFF;
   min-height: 100vh;
@@ -124,16 +205,19 @@ header {
   margin-bottom: 10%;
 }
 
+header p {
+      color: var(--alphawhite);
+      font-style: normal;
+}
+
 .header-wrapper {
   width: 90%;
-  margin: 0 auto;
   padding-top: 50px;
 }
 
 .flex-container {
   display: flex;
   justify-content:space-between;
-  text-align: center;
 }
 
 .horizontal {
@@ -159,16 +243,12 @@ header {
   min-width: 125px;
 }
 
- .nav-hover {  /*Link hover code */
-  content: '';
-  width:2px;
-  background-color: rgba(250,250,250, 0.5);
-  position:absolute;
-  top: -55px;
-  bottom: 45px;
-  left: 50%;
-  display: none;
- }
+.nav-hover {  /*Link hover code */
+ background-color: var(--alphawhite);
+ top: -55px;
+ bottom: 45px;
+ display: none;
+}
 
 nav ul {
   padding-left: 0;
@@ -198,12 +278,12 @@ nav ul li:active .nav-hover {
 }
 
 
- .right-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: #FFF;
+.right-container {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ color: #FFF;
 } 
 
 .right-container a{
@@ -211,7 +291,7 @@ nav ul li:active .nav-hover {
 
 } 
 
-.right-container i{
+.right-container i {
   margin-right: 35px;
 }
 
@@ -223,7 +303,7 @@ nav ul li:active .nav-hover {
 } 
 
 .left-middle {
-    color: rgba(250,250,250,0.5);
+    color: var(--alphawhite);
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
@@ -231,18 +311,10 @@ nav ul li:active .nav-hover {
 }
 
 .mid-middle {
-text-align: center;
 margin: 0 28%;
 }
 
-.mid-middle a {
-    margin-top: 50px;
-  text-transform: uppercase;
-  padding: 20px 40px;
-  background: var(--purple);
-  border-radius: 30px;
-}
-
+.mid-middle a,
 .center-flex a {
   margin-top: 50px;
   text-transform: uppercase;
@@ -253,7 +325,7 @@ margin: 0 28%;
 
 .right-middle p {
     padding: 5px 0;
-    color: rgba(250,250,250,0.5);
+    color: var(--alphawhite);
     font-weight: 600;
 }
 
@@ -261,25 +333,21 @@ margin: 0 28%;
     position: relative;
 }
 
-.strikethrough:before {
-    content: '';
+.strikethrough:before { /* Additional element styles in Stylistic Sugar*/
     width:0.5px;
-    background:  rgba(250,250,250,0.5);
-    position:absolute;
+    background: var(--alphawhite);
     top: 0;
     bottom: 0;
-    left: 50%;
     transform: rotate(45deg);
 }
 
-.scroll {
+.scroll {  /* Rotating the Scroll Div */
   align-self: center;
-   margin-top: 15%;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    text-align: center;
-    color: rgba(250,250,250,0.7);
+  margin-top: 17%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  color: var(--alphawhite);
 }
 
 .scroll p {
@@ -293,27 +361,16 @@ margin: 0 28%;
 }
 
 .fade2 {
-  color: rgba(250,250,250,0.5);
+  color: var(--alphawhite);
 }
 
 
 /************************************ Section 2: Our Projects *********************************************/
 .our-projects {
-  margin: 0 auto;
-  text-align: center;
   margin-bottom: 10%;
 }
 
-.color-pink {
-  color: var(--pink);
-  margin-bottom: 1%;
-}
-
 .our-projects p {
-  font-family: 'Libre Baskerville', serif; 
-  font-style: italic;
-  color: var(--grey);
-  padding: 0 9%;
   margin: 1% 30%;
 }
 
@@ -332,14 +389,6 @@ margin: 0 28%;
   padding: 5px 20px;
   color: var(--grey);
   border-radius: 25px;
-  /*transition: box-shadow 0.5s;*/
-}
-
-ul li a.no-hover {
-  background: var(--pink);
-  color: #fff;
-  border-radius: 25px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .filter ul li a:hover {
@@ -349,13 +398,18 @@ ul li a.no-hover {
   color: #fff;
   border-radius: 25px;
   box-shadow: 3px 7px 38px 3px rgba(0,0,0,0.2);
-    transition: box-shadow 0s;
+  transition: box-shadow 0s;
+}
 
+ul li a.no-hover {
+  background: var(--pink);
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .filter ul li:active a {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
 }
 
 .gallery-container {
@@ -377,12 +431,11 @@ li.large-image {
 }
 
 .gallery figure:hover figcaption,
-.gallery figure:active figcaption {
+.gallery figure:active figcaption {    
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .gallery figcaption {
   display: none;
@@ -396,22 +449,6 @@ li.large-image {
   right: 0;
 }
 
-.plus:before,
-.plus:after { 
-  content: '';
-  width:2px;
-  background-color: #fff;
-  position:absolute;
-  top: 33%;
-  bottom:57%;
-  left: 50%;
-  display: block;
- }
-
-.plus:after { 
-  transform: rotate(90deg);
- }
-
 .gallery figcaption p {
   color: #fff;
   padding: 0;
@@ -420,27 +457,12 @@ li.large-image {
 /************************************ Section 3: Our Expert ********************************************/
 
 .our-expert {
-  text-align: center;
   margin-bottom: 5%;
 }
 
-.color-pink {
-  color: var(--pink);
-  margin-bottom: 1%;
+.fix-spacing { 
+  margin: 1% 30% 2%;
 }
-
-.our-expert p {
-  font-family: 'Libre Baskerville', serif; 
-  font-style: italic;
-  color: var(--grey);
-  padding: 0 9%;
-}
-
-/*FIX BAD CODE*/
-.fix {                /*FIX BAD CODE*/
-    margin:1% 30% 2%;     /*FIX BAD CODE*/
-}   /*FIX BAD CODE*/
-/*FIX BAD CODE*/
 
 .expert-container {
   margin-top: 1%;
@@ -461,11 +483,10 @@ li.large-image {
   text-transform: none;
 }
 
-
 .expert-gallery li {
  max-width: 20%;
-display: flex;
-flex-direction: column;
+ display: flex;
+ flex-direction: column;
 }
 
 
@@ -481,7 +502,6 @@ flex-direction: column;
 .expert-gallery figure:hover figcaption {
   display: block;
 }
-
 
 .expert-gallery figcaption {
   display: none;
@@ -499,12 +519,12 @@ flex-direction: column;
 .social-hover {
   padding: 0 60px;
 }
+
 .social {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 257.67px;
-
 }
 
 .social a {
@@ -518,8 +538,8 @@ flex-direction: column;
 
 .score {
   width: calc(60% + 40px);
-  margin: 0 auto;
 }
+
 .score ul {
   display: flex;
   justify-content: space-between;
@@ -543,7 +563,8 @@ flex-direction: column;
 }
 
 
-.marketing {
+
+.marketing { 
   width: 75%;
 }
 
@@ -559,19 +580,21 @@ flex-direction: column;
   width: 80%;
 }
 
-.color {
-  height: 10px;
-  background: linear-gradient(to right, red, blue);
-  border-radius: 20px;  
-}
-
-.score-bar {
+.score-bar {    /*Background grey color for the bar*/
   width: 100%;
   height: 10px;
   background: var(--lightgrey);
   border-radius: 20px;
   margin: 20px 0;
 }
+
+.score-color {    /* Adding the gradient to the score-bar */
+  height: 10px;
+  background: linear-gradient(to right, red, blue);
+  border-radius: 20px;  
+}
+
+
 
 /************************************ Section 4: Blog & News ********************************************/
 
@@ -582,21 +605,7 @@ flex-direction: column;
 }
 
 .blog-news {
-  text-align: center;
   width: calc(60% + 40px);
-  margin: 0 auto;
-}
-
-.color-pink {
-  color: var(--pink);
-  margin-bottom: 1%;
-}
-
-.blog-news p {
-  font-family: 'Libre Baskerville', serif; 
-  font-style: italic;
-  color: var(--grey);
-  padding: 0 9%;
 }
 
 .blog-news h2 {
@@ -618,6 +627,10 @@ flex-direction: column;
   transition: box-shadow 0.5s;
 }
 
+.blog-post ul li a {
+  color: #000;
+}
+
 .blog-post ul li:hover {
   box-shadow: 3px 7px 38px 3px rgba(0,0,0,0.2);
 }
@@ -628,7 +641,6 @@ flex-direction: column;
 
 .bottom-blog-wrapper {
   width: 80%;
-  margin: 0 auto;
   text-align: left;
 }
 
@@ -663,48 +675,42 @@ flex-direction: column;
 }
 
 .photo {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 
-.first {
-    display: inline;
-    position: absolute;
-    bottom: -10px;
-    height: 150%;
-    width: auto;
-  }
-
-.second {
-    display: inline;
-    position: absolute;
-    bottom: -25px;
-    left: -1px;
-    height: 150%;
-    width: auto;
+.first-author,
+.second-author,
+.third-author {
+  display: inline;
+  position: absolute;
+  height: 150%;
+  width: auto;
 }
 
-.third {
-    display: inline;
-    position: absolute;
-    left: -35px;
-    bottom: -10px;
-    margin: 0 auto;
-    height: 150%;
-    width: auto;
+.first-author {
+  bottom: -10px;
+}
+
+.second-author {
+  bottom: -25px;
+  left: -1px;
+}
+
+.third-author {
+  left: -35px;
+  bottom: -10px;
 }
 
 .by-who {
   font-style: italic;
   text-transform: none;
 }
-
-
 
 
 /************************************ Section 4: Blog & News ********************************************/
@@ -715,22 +721,21 @@ footer {
   color: white;
 }
 
-footer p{
-  font-size: 1.5rem;
+footer p,
+footer a {
+  font-size: 1.2rem;
   line-height: 2.25rem;
   color: var(--grey);
   margin-bottom: 2%;
 }
 
-h4 {
-  font-size: 1.17rem;
-  font-weight: 400;
-    margin-bottom: 2%;
+.left {
+  margin-right: 10%;
+  /*margin-right: 5px;*/
 }
 
 .footer-wrapper {
   width: calc(60% + 40px);
-  margin: 0 auto;
 }
 
 .footer-flex {
@@ -745,7 +750,6 @@ h4 {
 
 .footer-contact {
   display: flex;
-
 }
 
 .half {
@@ -772,18 +776,18 @@ h4 {
 }
 
 .footer-title {
-  margin-bottom: 11%;
+  margin-bottom: 7%;
 }
 
 .center-social {
   display: flex;
-  margin-bottom: 12%;
+  margin-bottom: 5%;
 }
 
 .center-social i {
   width: 8%;
   margin-right: 10px;
-  flex: 1;
+  margin-top: 2px;
 }
 
 .twitter-lineup {
@@ -801,22 +805,25 @@ h4 {
   align-items: baseline; 
 }
 
+.clock-date p {
+  width: 100%;
+}
+
 .clock-date i {
   margin-right: 10px;
   transform: scale(-1, 1);
 }
 
-.center p {
-  padding-right: 8%;
+.center {
+  padding-right: 10%;
 }
 
-.left p {
-  padding-right: 5%;
+.center p {
+  /*padding-right: 10%;*/
 }
 
 .copyright {
   text-transform: capitalize;
-  text-align: center;
   margin-bottom: 0;
   padding: 40px;
 }
@@ -826,8 +833,8 @@ h4 {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 3%;
-  /*width: 90%;*/
 }
+
 .store-hours h4{
   margin: 3% 0;
   width: 50%;
