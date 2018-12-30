@@ -19,9 +19,10 @@ font-family: 'Libre Baskerville', serif; font-style: italic;
 Icons
 Font Awesome
 Colours
-Purple #6e45e2 hsla(256, 73%, 58%, 0.2)
-Pink #ed145b   hsla(340, 86%, 50%, 0.2)
-Blue #0d4ef7   hsla(223, 94%, 51%, 0.2)
+
+Purple #6e45e2 hsla(256, 73%, 58%, 0.5)
+Pink #ed145b   hsla(340, 86%, 50%, 0.7)
+Blue #0d4ef7   hsla(223, 60%, 50%, 0.3)
 Black #171717
 Grey #f1f8fc
 */
@@ -207,11 +208,11 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 header p {
-      color: var(--alphawhite);
+      color: #fff;
       font-style: normal;
 }
 
@@ -308,7 +309,6 @@ nav ul li:active .nav-hover {
 } 
 
 .left-middle {
-    color: var(--alphawhite);
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
@@ -330,7 +330,6 @@ margin: 0 28%;
 
 .right-middle p {
     padding: 5px 0;
-    color: var(--alphawhite);
     font-weight: 600;
 }
 
@@ -339,8 +338,8 @@ margin: 0 28%;
 }
 
 .strikethrough:before { /* Additional element styles in Stylistic Sugar*/
-    width:0.5px;
-    background: var(--alphawhite);
+    width:1px;
+    background: #fff;
     top: 0;
     bottom: 0;
     transform: rotate(45deg);
@@ -348,17 +347,22 @@ margin: 0 28%;
 
 .scroll {  /* Rotating the Scroll Div */
   align-self: center;
-  margin-top: 17%;
+  margin-top: 16%;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
-  color: var(--alphawhite);
+}
+
+.scroll i {
+  margin-top: 5px;
 }
 
 .scroll p {
     display: inline;
     text-transform: uppercase;
     font-weight: 600;
+    color: white;
+    margin-top: 8px;
 }
 
 .fade1 {
@@ -372,7 +376,8 @@ margin: 0 28%;
 
 /************************************ Section 2: Our Projects *********************************************/
 .our-projects {
-  margin-bottom: 10%;
+  padding-top: 5%;
+  margin-bottom: 5%;
 }
 
 .our-projects p {
@@ -464,6 +469,7 @@ li.large-image {
 /************************************ Section 3: Our Expert ********************************************/
 
 .our-expert {
+  padding-top: 5%;
   margin-bottom: 5%;
 }
 
@@ -542,6 +548,11 @@ li.large-image {
 .social i {
   font-size: 1.75rem;
   color: white;
+  transition: font-size 0.5s;
+}
+
+.expert-gallery figcaption a:hover i { /* Adding a transition to the social media icons */
+  font-size: 3rem;
 }
 
 .score {
@@ -596,7 +607,7 @@ li.large-image {
 
 .score-color {    /* Adding the gradient to the score-bar */
   height: 10px;
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to right, red, var(--blue));
   border-radius: 20px;  
 }
 
@@ -606,8 +617,8 @@ li.large-image {
 
 .blog-background {
   background: var(--lightgrey);
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 8%;
+  padding-bottom: 5%;
 }
 
 .blog-news {
