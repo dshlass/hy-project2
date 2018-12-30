@@ -57,6 +57,11 @@ p {
   margin: 0;
 } 
 
+.bold {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
 .italics {
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
@@ -89,7 +94,7 @@ h1 {
   font-size: 6rem;
 }
 
- h2 {
+h2 {
   font-size: 3rem;
   font-weight: 400;
   padding: 0 7%;
@@ -106,7 +111,7 @@ h3 {
 h4 {
   font-size: 1.25rem;
   line-height: 2.25rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 2%;
 }
 
@@ -264,7 +269,7 @@ nav ul li {
    list-style: none;
 }
 
-nav ul li:last-child{
+nav ul li:last-child {
   margin:0;
 }
 
@@ -286,7 +291,7 @@ nav ul li:active .nav-hover {
  color: #FFF;
 } 
 
-.right-container a{
+.right-container a {
   font-weight: 400;
 
 } 
@@ -430,23 +435,25 @@ li.large-image {
  width: 40%;
 }
 
+.gallery figcaption,
 .gallery figure:hover figcaption,
 .gallery figure:active figcaption {    
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0.8;
 }
 
 .gallery figcaption {
-  display: none;
   position: absolute;
   background: var(--pink);
-  opacity: 0.8;
+  opacity: 0;
   color: #fff;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  transition: opacity 0.5s;
 }
 
 .gallery figcaption p {
@@ -500,20 +507,21 @@ li.large-image {
 }
 
 .expert-gallery figure:hover figcaption {
-  display: block;
+  opacity: 0.8;
 }
 
 .expert-gallery figcaption {
-  display: none;
+  display: block;
   position: absolute;
   background: var(--pink);
-  opacity: 0.8;
+  opacity: 0;
   color: #fff;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   border-radius: 15px;
+  transition: opacity 0.5s;
 }
 
 .social-hover {
@@ -561,8 +569,6 @@ li.large-image {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-
 
 .marketing { 
   width: 75%;
@@ -628,15 +634,16 @@ li.large-image {
 }
 
 .blog-post ul li a {
-  color: #000;
+  color: rgba(0, 0, 0, 1);
+  transition: color 0.5s;
 }
 
 .blog-post ul li:hover {
-  box-shadow: 3px 7px 38px 3px rgba(0,0,0,0.2);
+  box-shadow: 3px 7px 38px 3px rgba(0, 0, 0, 0.2);
 }
 
-.blog-post ul li:hover h2{
-  color: var(--pink);
+.blog-post ul li:hover a {  /* Transition of the link text */
+  color: rgba(237, 20, 91, 1);
 }
 
 .bottom-blog-wrapper {
@@ -716,22 +723,18 @@ li.large-image {
 /************************************ Section 4: Blog & News ********************************************/
 
 footer {
-  background: #000;
+  background: #171717;
   padding-top: 5%;
-  color: white;
+  color: #7B7B80;
 }
 
 footer p,
 footer a {
   font-size: 1.2rem;
   line-height: 2.25rem;
-  color: var(--grey);
+  color: #424242;
   margin-bottom: 2%;
-}
-
-.left {
-  margin-right: 10%;
-  /*margin-right: 5px;*/
+  font-style: normal;
 }
 
 .footer-wrapper {
@@ -743,9 +746,13 @@ footer a {
   justify-content: space-between;
 }
 
+.left {
+  margin-right: 10%;
+}
+
 .footer-logo {
   width: 100px;
-  margin-bottom: 5%;
+  margin-bottom: 12%;
 }
 
 .footer-contact {
@@ -758,7 +765,6 @@ footer a {
 
 .footer-social {
   display: flex;
-
 }
 
 .footer-social a {
@@ -766,7 +772,7 @@ footer a {
   padding: 12px;
 }
 
-.footer-social a:first-child {
+.footer-social a:first-child { /* Removes the left margin on the first social media icon only */
   padding-left: 0;
 }
 
@@ -776,18 +782,19 @@ footer a {
 }
 
 .footer-title {
-  margin-bottom: 7%;
+  margin-bottom: 15%;
 }
 
 .center-social {
   display: flex;
   margin-bottom: 5%;
+  color: #fff;
 }
 
 .center-social i {
   width: 8%;
   margin-right: 10px;
-  margin-top: 2px;
+  margin-top: 6px;
 }
 
 .twitter-lineup {
@@ -818,10 +825,6 @@ footer a {
   padding-right: 10%;
 }
 
-.center p {
-  /*padding-right: 10%;*/
-}
-
 .copyright {
   text-transform: capitalize;
   margin-bottom: 0;
@@ -835,7 +838,7 @@ footer a {
   margin-top: 3%;
 }
 
-.store-hours h4{
+.store-hours h4 {
   margin: 3% 0;
   width: 50%;
   text-transform: uppercase;
@@ -844,7 +847,6 @@ footer a {
 .store-hours h4:nth-of-type(2n) {
   text-align: right;
 }
-
 
 
 
