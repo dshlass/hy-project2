@@ -8,6 +8,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 .visuallyhidden:not(:focus):not(:active) {position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(0 0 0 0);overflow: hidden;}
 
+
 /************************************ Style Guide *********************************************/
 
 /*
@@ -18,8 +19,8 @@ font-family: 'Nunito', sans-serif;  font-weight: 400 or 900
 font-family: 'Libre Baskerville', serif; font-style: italic;
 Icons
 Font Awesome
-Colours
 
+Colours
 Purple #6e45e2 hsla(256, 73%, 58%, 0.5)
 Pink #ed145b   hsla(340, 86%, 50%, 0.7)
 Blue #0d4ef7   hsla(223, 60%, 50%, 0.3)
@@ -34,10 +35,10 @@ Grey #f1f8fc
  --black: #171717;
  --lightgrey: #f1f8fc;
  --grey: #b9b9b9;
- --alphawhite: rgba(250,250,250, 0.5);
 }
 
-/************************************ General Settings and Stylistic Sugar *********************************************/
+
+/************************* General Settings of Elements and Sections and Stylistic Sugar *************************/
 
 html {
   font-size: 62.5%;
@@ -80,7 +81,7 @@ li {
 a {
   text-decoration: none;
   display: inline-block;
-  color: #FFFFFF;
+  color: #fff;
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -133,7 +134,7 @@ p {
   padding: 0 9%;
 }
 
-.header-wrapper, /* Margin Wrapper to Center various */
+.header-wrapper, /* Margin Wrapper to Center various sections */
 .our-projects,
 .score,
 .blog-news,
@@ -195,12 +196,27 @@ p {
   transform: rotate(90deg);
  }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: #fff;
+  padding: 20px 40px;
+  background: var(--purple);
+}
+
+.skip-link:focus {
+    left: 45.5%;
+}
+
 /************************************ Section 1: Header *********************************************/
 
 header {
   background-image: linear-gradient(45deg, hsla(223, 60%, 50%, 0.3) 20%, 
           hsla(256, 73%, 58%, 0.5) 66%, hsla(340, 86%, 50%, 0.7)), 
-          linear-gradient(var(--alphawhite), var(--alphawhite)), 
+          linear-gradient(rgba(250,250,250, 0.5), rgba(250,250,250, 0.5)), 
           url('./assets/image-1.jpeg');
   color: #FFF;
   min-height: 100vh;
@@ -208,7 +224,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 header p {
@@ -249,8 +265,8 @@ header p {
   min-width: 125px;
 }
 
-.nav-hover {  /*Link hover code */
- background-color: var(--alphawhite);
+.nav-hover {  /*Link hover code*/
+ background-color: rgba(250,250,250, 0.5);
  top: -55px;
  bottom: 45px;
  display: none;
@@ -312,7 +328,6 @@ nav ul li:active .nav-hover {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
-    font-weight: 600;
 }
 
 .mid-middle {
@@ -330,7 +345,6 @@ margin: 0 28%;
 
 .right-middle p {
     padding: 5px 0;
-    font-weight: 600;
 }
 
 .strikethrough {
@@ -347,7 +361,7 @@ margin: 0 28%;
 
 .scroll {  /* Rotating the Scroll Div */
   align-self: center;
-  margin-top: 16%;
+  margin-top: 14%;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
@@ -361,7 +375,6 @@ margin: 0 28%;
     display: inline;
     text-transform: uppercase;
     font-weight: 600;
-    color: white;
     margin-top: 8px;
 }
 
@@ -370,14 +383,15 @@ margin: 0 28%;
 }
 
 .fade2 {
-  color: var(--alphawhite);
+  color: rgba(250,250,250, 0.5);
 }
 
 
 /************************************ Section 2: Our Projects *********************************************/
+
 .our-projects {
-  padding-top: 5%;
-  margin-bottom: 5%;
+  padding-top: 8%;
+  margin-bottom: 2%;
 }
 
 .our-projects p {
@@ -466,11 +480,12 @@ li.large-image {
   padding: 0;
 }
 
+
 /************************************ Section 3: Our Expert ********************************************/
 
 .our-expert {
-  padding-top: 5%;
-  margin-bottom: 5%;
+  padding-top: 8%;
+  margin-bottom: 2%;
 }
 
 .fix-spacing { 
@@ -548,11 +563,11 @@ li.large-image {
 .social i {
   font-size: 1.75rem;
   color: white;
-  transition: font-size 0.5s;
+  transition: all 0.5s;
 }
 
 .expert-gallery figcaption a:hover i { /* Adding a transition to the social media icons */
-  font-size: 3rem;
+  transform: scale(2);
 }
 
 .score {
@@ -610,7 +625,6 @@ li.large-image {
   background: linear-gradient(to right, red, var(--blue));
   border-radius: 20px;  
 }
-
 
 
 /************************************ Section 4: Blog & News ********************************************/
@@ -685,7 +699,6 @@ li.large-image {
   margin-bottom: 5%;
 }
 
-
 .writer {
   display:flex;
   align-items: center;
@@ -700,7 +713,6 @@ li.large-image {
   border-radius: 50%;
   margin-right: 20px;
 }
-
 
 .first-author,
 .second-author,
@@ -734,9 +746,10 @@ li.large-image {
 /************************************ Section 4: Blog & News ********************************************/
 
 footer {
-  background: #171717;
+  background: var(--black);
   padding-top: 5%;
   color: #7B7B80;
+  position: relative;
 }
 
 footer p,
@@ -858,29 +871,3 @@ footer a {
 .store-hours h4:nth-of-type(2n) {
   text-align: right;
 }
-
-
-
-
-
-
-
-
-/*    #triangle-up {
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-bottom: 100px solid red;
-      position: absolute;
-    }
-
-
-    #parallelogram {
-      width: 150px;
-      height: 100px;
-      transform: skew(-20deg);
-      background: red;
-      position: absolute;
-    }*/
-  

@@ -2,23 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cronus</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Nunito:400,900" rel="stylesheet">
-    <link type="image/png" href="./assets/logos/favicon.png" rel="icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cronus</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Nunito:400,900" rel="stylesheet">
+  <link type="image/png" href="./assets/logos/favicon.png" rel="icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
 </head>
 
 <body>
+  <a href="#learnmore" class="skip-link">Skip to main content.</a>
   <header>
     <div class="header-wrapper"> <!-- Start of Section 1: Header -->
       <div class="flex-container vertical">  <!-- Header Main Flexbox: Column -->
         <div class="flex-container horizontal">
           <div class="logo-container"> <!-- First Row of Column: Logo, Navigation and Search/Country Content -->
-           <img src="./assets/logos/logo-cronus.png" alt="Cronos logo is the letter C that has is repeated in four sizes from big to small.">
+           <img src="./assets/logos/logo-cronus.png"  id="text" alt="Cronos logo is the letter C that has is repeated in four sizes from big to small.">
           </div> 
           <nav>
            <ul> <!-- Main Navigation -->
@@ -442,5 +445,14 @@
     </div> <!-- End of Footer wrapper -->
     <p class="copyright">Copyright &copy; Cronus - all rights reserved. Made by Moontheme</p>
   </footer> <!-- End of the footer -->
+ 
+  <script> /* Script to make the scroll transition better */
+    $(function() {
+        $('a').smoothScroll({
+            offset: 100
+        });
+    });
+  </script>
+
 </body>
 </html>
