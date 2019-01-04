@@ -98,9 +98,11 @@
   
   <main id="learnmore"> <!-- Start of Main content -->
     <section id="ourProject" class="our-projects"> <!-- Start of Section 2: Our Projects -->
-      <h3 class="color-pink section-title">Our projects</h3>
-      <h2>Discover the <span class="italics">most fascinating</span> projects for our clients</h2>
-      <p>Veritatis et quasi architect° beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fiigit</p>
+      <div class="section-heading-wrapper">
+        <h3 class="color-pink section-title">Our projects</h3>
+        <h2>Discover the <span class="italics">most fascinating</span> projects for our clients</h2>
+        <p class="italics">Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fiigit</p>
+      </div>
       <div class="filter"> <!-- Projects Photo Filtering -->
         <ul>
           <li><a class="no-hover" href="#filter">All</a></li>  <!-- This element has hover state as default -->
@@ -196,9 +198,11 @@
     </section> <!-- End of Section 2: Our Projects -->
 
     <section id="page" class="our-expert"> <!-- Start of Section 3: Our Expert -->
-      <h3 class="color-pink section-title">Our expert</div></h3>
-      <h2>Our team of experienced professionals to <span class="italics">get fast profit</span></h2>
-      <p class="fix-spacing">Veritatis et quasi architect° beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fiigit</p>
+      <div class="section-heading-wrapper">
+        <h3 class="color-pink section-title">Our expert</h3>
+        <h2>Our team of experienced professionals to <span class="italics">get fast profit</span></h2>
+        <p class="italics">Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fiigit</p>
+      </div>
       <div class="expert-container">  
         <ul class="expert-gallery"> <!-- Start of the Experts Gallery --> 
           <li>
@@ -222,13 +226,13 @@
               </figcaption>
             </figure>
             <h3 class="color-pink">Joht Herry</h3> <!-- Name and Position always under the photos -->
-            <p>CEO Cronus Business</p> 
+            <p class="italics">CEO Cronus Business</p> 
           </li>
           <li class="center-image">
             <figure> <!-- Second Expert -->
               <img src="./assets/image-13.jpg" alt="Hellen Marry, creative director of Cronus Business">
               <figcaption class="social-hover">
-                <div class="social"> <!-- Flex container for the social links - consider removing ul for simplicity -->
+                <div class="social">
                     <a href="#facebook">
                       <i class="fab fa-facebook-f"></i>
                     </a>
@@ -245,7 +249,7 @@
               </figcaption>
             </figure>
             <h3 class="color-pink">Hellen Marry</h3>
-            <p>Creative director</p>
+            <p class="italics">Creative director</p>
           </li>
           <li>
             <figure>  <!-- Third Expert -->
@@ -268,7 +272,7 @@
               </figcaption>
             </figure>
             <h3 class="color-pink">David jame</h3>
-            <p>Business Manager</p> 
+            <p class="italics">Business Manager</p> 
           </li>
         </ul>
       </div>
@@ -276,7 +280,7 @@
         <ul>
           <li class="score-section">
             <h3>Marketing Online</h3>
-            <p>75%</p>
+            <p class="grey">75%</p>
             <div class="score-bar"> <!-- Empty div for gray background -->
               <div class="marketing score-color"></div> <!-- Empty div for gradient bar effect -->
             </div>
@@ -308,8 +312,10 @@
 
     <section id="blog" class="blog-background"> <!-- Start of Section 4: Blog & News -->
       <div class="blog-news"> <!-- Blog & News wrapper -->
-        <h3 class="color-pink section-title">Blog &amp news</h3>
-        <h2>Keep always updated <span class="italics">with our fresh</span> blog posts</h2>
+        <div class="blog-news-heading-wrapper">
+          <h3 class="color-pink section-title">Blog &amp news</h3>
+          <h2>Keep always updated <span class="italics">with our fresh</span> blog posts</h2>
+        </div>
         <div class="blog-post"> <!-- Blog post wrapper -->
           <ul> <!-- Start of the Blog -->
             <li> <!-- First Blog Post -->
@@ -320,7 +326,7 @@
                 <div class="bottom-blog-wrapper">
                   <h3 class="color-pink">August 6, 2017</h3>
                   <a href="#blogpost1"><h2>Facilisis rutrum aenean</h2></a>
-                  <p>In eros a justo facilisis rutrum. Aenean id ullamcorper libero. Vestibulum imperdiet </p>
+                  <p>In eros a justo facilisis rutrum. Aenean id ullamcorper libero. Vestibulum imperdiet</p>
                   <div class="writer"> <!-- Bottom of blog flex container -->
                     <div class="photo"> <!-- Author image container -->
                       <img class="first-author" src="./assets/image-18.jpg" alt="Author of article, John kook.">
@@ -380,15 +386,15 @@
             <img src="./assets/logos/logo-cronus.png" alt="Cronos logo is the letter C that has is repeated in four sizes from big to small.">
           </div>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explkabo. Nemo enim ipsam</p>
-          <p>Business Address</p>
+          <p class="uppercase">Business Address</p>
           <h4>London Oxford Street, 012 United Kingdom.</h4>
           <div class="footer-contact"> <!-- Container to split contact info into two columns -->
             <div class="half">
-              <p>Business phone:</p>
+              <p class="uppercase">Business phone:</p>
               <h4>+032 3456 7890</h4>
             </div>
             <div class="half">
-              <p>Business email:</p>
+              <p class="uppercase">Business email:</p>
               <h4>Business@moontheme.net</h4>
             </div>
           </div>
@@ -410,12 +416,12 @@
         
         <div class="center"> <!-- Start of the container for the center column of the footer -->
           <h3 class="footer-title">Twitter feed</h3>
-          <a href="">
+          <a class="twit-handle" href="#twitter">
             <div class="center-social"> <!-- Twitter logo and handle -->
               <i class="fab fa-twitter"></i>
               <div class="twitter-lineup">
-                <p class="bold">Commodo ultricies</p>
-                <h3>@Moontheme</h3>
+                <h3 >Commodo ultricies</h3>
+                <p class="uppercase">@Moontheme</p>
               </div>
             </div>
           </a>
@@ -433,9 +439,9 @@
           <div class="store-hours"> <!-- Flex container to split up the hours of operations -->
             <h4>mon - tues:</h4>
             <h4>6:00 am - 10:00 am</h4>
-            <h4>wednes - thurs</h4>
+            <h4>wednes - thurs:</h4>
             <h4>8:00 am - 6:00 pm</h4>
-            <h4>fri</h4>
+            <h4>fri:</h4>
             <h4>3:00 pm - 8:00 pm</h4>
             <h4>sun:</h4>
             <h4>closed</h4>

@@ -28,7 +28,7 @@ Black #171717
 Grey #f1f8fc
 */
 
-:root {
+:root {  /* Playing around with Global Variables */
  --purple: #6e45e2;
  --pink: #ed145b;
  --blue: #0d4ef7;
@@ -58,16 +58,6 @@ p {
   padding: 0;
   margin: 0;
 } 
-
-.bold {
-  font-size: 1.4rem;
-  color: #fff;
-}
-
-.italics {
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic;
-}
 
 .color-pink {
   color: var(--pink);
@@ -99,8 +89,6 @@ h1 {
 h2 {
   font-size: 3rem;
   font-weight: 400;
-  padding: 0 7%;
-  margin: 0 30%;
 }
 
 h3 {
@@ -119,37 +107,52 @@ h4 {
 
 p {
   font-size: 1.25rem;
-  font-style: italic;
   color: var(--grey);
 }
 
-.our-project p,
-.blog-news p {
-  font-family: 'Libre Baskerville', serif; 
+.bold {
+  font-size: 1.4rem;
+  color: #fff;
 }
 
-.our-projects p,
-.our-expert p,
-.blog-news p {
-  padding: 0 9%;
+.italics {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.section-heading-wrapper {
+  width: 40%;
+  text-align: center;
+  margin-bottom: 1%;
+}
+  
+.section-heading-wrapper h2 {
+  margin-bottom: 2%;
+  padding: 0 20%;
+}
+
+.section-heading-wrapper p {
+  padding: 0 10%;
 }
 
 .header-wrapper, /* Margin Wrapper to Center various sections */
+.section-heading-wrapper, 
 .our-projects,
 .score,
 .blog-news,
 .bottom-blog-wrapper,
 .third, 
 .footer-wrapper {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .flex-container,
 .mid-middle,
 .scroll,
-.our-projects,
-.our-expert,
-.blog-news,
 .copyright {
   text-align: center;
 }
@@ -159,8 +162,8 @@ p {
 .strikethrough:before,
 .plus:before,
 .plus:after {
-    content: '';
-    position:absolute;
+  content: '';
+  position:absolute;
 }
 
 .nav-hover,
@@ -201,14 +204,14 @@ p {
   left: -1000px;
   top: 5px;
   z-index: 999;
-  background: white;
-  color: #fff;
+  background: #FFF;
+  color: #FFF;
   padding: 20px 40px;
   background: var(--purple);
 }
 
 .skip-link:focus {
-    left: 45.5%;
+  left: 45.5%;
 }
 
 /************************************ Section 1: Header *********************************************/
@@ -228,8 +231,8 @@ header {
 }
 
 header p {
-      color: #fff;
-      font-style: normal;
+  color: #fff;
+  font-style: normal;
 }
 
 .header-wrapper {
@@ -252,7 +255,7 @@ header p {
   flex-direction:column;
 }
 
-.vertical:nth-child(2) {
+.vertical:nth-child(2) {  
   margin-top: 20vh;
 }
 
@@ -266,10 +269,10 @@ header p {
 }
 
 .nav-hover {  /*Link hover code*/
- background-color: rgba(250,250,250, 0.5);
- top: -55px;
- bottom: 45px;
- display: none;
+  background-color: rgba(250,250,250, 0.5);
+  top: -55px;
+  bottom: 45px;
+display: none;
 }
 
 nav ul {
@@ -281,9 +284,9 @@ nav ul {
 }
 
 nav ul li {
-   position: relative;
-   margin-right:40px;
-   list-style: none;
+  position: relative;
+  margin-right:40px;
+  list-style: none;
 }
 
 nav ul li:last-child {
@@ -310,7 +313,6 @@ nav ul li:active .nav-hover {
 
 .right-container a {
   font-weight: 400;
-
 } 
 
 .right-container i {
@@ -320,18 +322,18 @@ nav ul li:active .nav-hover {
 .right-container svg {
   margin-right: 15px;
   width: 20px;
-  border: 1px white solid;
+  border: 1px #FFF solid;
   border-radius: 20px;
 } 
 
 .left-middle {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
 }
 
 .mid-middle {
-margin: 0 28%;
+  margin: 0 28%;
 }
 
 .mid-middle a,
@@ -344,24 +346,24 @@ margin: 0 28%;
 }
 
 .right-middle p {
-    padding: 5px 0;
+  padding: 5px 0;
 }
 
 .strikethrough {
-    position: relative;
+  position: relative;
 }
 
 .strikethrough:before { /* Additional element styles in Stylistic Sugar*/
-    width:1px;
-    background: #fff;
-    top: 0;
-    bottom: 0;
-    transform: rotate(45deg);
+  width:1px;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  transform: rotate(45deg);
 }
 
 .scroll {  /* Rotating the Scroll Div */
   align-self: center;
-  margin-top: 14%;
+  margin-top: 16%;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
@@ -372,10 +374,10 @@ margin: 0 28%;
 }
 
 .scroll p {
-    display: inline;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 8px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 8px;
 }
 
 .fade1 {
@@ -392,10 +394,6 @@ margin: 0 28%;
 .our-projects {
   padding-top: 8%;
   margin-bottom: 2%;
-}
-
-.our-projects p {
-  margin: 1% 30%;
 }
 
 .filter ul {
@@ -415,24 +413,24 @@ margin: 0 28%;
   border-radius: 25px;
 }
 
-.filter ul li a:hover {
+.filter ul li a:hover { /* large box shadow when you hover over the filter options */
   margin: 15px;
   padding: 5px 20px;
   background: var(--pink);
   color: #fff;
   border-radius: 25px;
   box-shadow: 3px 7px 38px 3px rgba(0,0,0,0.2);
-  transition: box-shadow 0s;
+  transition: box-shadow;
 }
 
-ul li a.no-hover {
+ul li a.no-hover {  /* Wanted to add some box shadow to the All button as if it looked selected */
   background: var(--pink);
   color: #fff;
   border-radius: 25px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.filter ul li:active a {
+.filter ul li:active a { /* box shadow transitions and tightens up to make it look like it has been selected */
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -446,12 +444,12 @@ ul li a.no-hover {
 }
 
 .gallery li {
- width: 20%;
- position: relative;
+  width: 20%;
+  position: relative;
 }
 
 li.large-image {
- width: 40%;
+  width: 40%;
 }
 
 .gallery figcaption,
@@ -473,11 +471,12 @@ li.large-image {
   left: 0;
   right: 0;
   transition: opacity 0.5s;
+  text-align: center;
 }
 
 .gallery figcaption p {
   color: #fff;
-  padding: 0;
+  margin-top: 1%;
 }
 
 
@@ -488,12 +487,8 @@ li.large-image {
   margin-bottom: 2%;
 }
 
-.fix-spacing { 
-  margin: 1% 30% 2%;
-}
-
 .expert-container {
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 .expert-gallery {
@@ -511,16 +506,20 @@ li.large-image {
   text-transform: none;
 }
 
-.expert-gallery li {
- max-width: 20%;
- display: flex;
- flex-direction: column;
+.expert-gallery h3, 
+.expert-gallery p {
+  text-align: center;
 }
 
+.expert-gallery li {
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+}
 
 .expert-gallery figure img {
   border-radius: 15px;
-  height: 530px;   /*Sorry can't figure out how to make a proper size - Don't judge me*/
+  height: 530px;   /* Sorry can't figure out how to make a proper size - Don't judge me */
 }
 
 .center-image {
@@ -562,11 +561,11 @@ li.large-image {
 
 .social i {
   font-size: 1.75rem;
-  color: white;
+  color: #FFF;
   transition: all 0.5s;
 }
 
-.expert-gallery figcaption a:hover i { /* Adding a transition to the social media icons */
+.expert-gallery figcaption a:hover i { /* Adding a scale transition to the social media icons for some feedback */
   transform: scale(2);
 }
 
@@ -588,6 +587,7 @@ li.large-image {
 
 .score p {
   padding: 10px 0 0 75px;
+  color: #828282;
 }
 
 .score-section {
@@ -639,8 +639,10 @@ li.large-image {
   width: calc(60% + 40px);
 }
 
-.blog-news h2 {
-  margin: 0 20%;
+.blog-news-heading-wrapper{
+  width: 45%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .blog-post {
@@ -689,12 +691,11 @@ li.large-image {
   padding: 0;
   margin: 0 0 5%;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .bottom-blog p {
   padding: 0;
-  font-size: 1.17rem;
   line-height: 2.25rem;
   margin-bottom: 5%;
 }
@@ -719,8 +720,6 @@ li.large-image {
 .third-author {
   display: inline;
   position: absolute;
-  height: 150%;
-  width: auto;
 }
 
 .first-author {
@@ -735,6 +734,8 @@ li.large-image {
 .third-author {
   left: -35px;
   bottom: -10px;
+  height: 150%;
+  width: auto;
 }
 
 .by-who {
@@ -750,6 +751,15 @@ footer {
   padding-top: 5%;
   color: #7B7B80;
   position: relative;
+}
+
+footer h4,
+footer a {
+  font-weight: 400;
+}
+
+footer h3 {
+  margin: 0;
 }
 
 footer p,
@@ -770,8 +780,16 @@ footer a {
   justify-content: space-between;
 }
 
+.footer-title {
+  margin: 4% 0 10% 0;
+}
+
 .left {
-  margin-right: 10%;
+  margin-right: 5%;
+}
+
+.center {
+  margin-right: 5%;
 }
 
 .footer-logo {
@@ -784,7 +802,7 @@ footer a {
 }
 
 .half {
-  width: 45%;
+  width: 50%;
 }
 
 .footer-social {
@@ -802,15 +820,16 @@ footer a {
 
 .footer-social i {
   font-size: 1.25rem;
-  color: white;
+  color: #fff;
 }
 
-.footer-title {
-  margin-bottom: 15%;
+.twit-handle {
+  width: 100%;
 }
 
 .center-social {
   display: flex;
+  margin-top: 5%;
   margin-bottom: 5%;
   color: #fff;
 }
@@ -821,14 +840,13 @@ footer a {
   margin-top: 6px;
 }
 
+.center-social h3 {
+  text-transform: none;
+}
+
 .twitter-lineup {
   display: flex;
   flex-direction: column;
-}
-
-.center-social p,
-.center-social h3 {
-  margin: 0;
 }
 
 .clock-date {
@@ -845,10 +863,6 @@ footer a {
   transform: scale(-1, 1);
 }
 
-.center {
-  padding-right: 10%;
-}
-
 .copyright {
   text-transform: capitalize;
   margin-bottom: 0;
@@ -863,7 +877,7 @@ footer a {
 }
 
 .store-hours h4 {
-  margin: 3% 0;
+  margin: 2% 0;
   width: 50%;
   text-transform: uppercase;
 }
