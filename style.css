@@ -80,11 +80,6 @@ p {
   margin: 0;
 } 
 
-.color-pink {
-  color: var(--pink);
-  margin-bottom: 1%;
-}
-
 li {
   list-style: none;
 }
@@ -129,6 +124,11 @@ h4 {
 p {
   font-size: 1.25rem;
   color: var(--grey);
+}
+
+.color-pink {
+  color: var(--pink);
+  margin-bottom: 1%;
 }
 
 .bold {
