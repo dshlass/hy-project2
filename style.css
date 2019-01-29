@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 /***************************************************************************/
 /*      LEGEND                                                             */
 /*      HIGHLIGHT AND USE USE CTRL + F + ENTER TO SKIP TO EACH SECTION     */ 
@@ -906,8 +903,7 @@ footer a {
 
 .store-hours h4:nth-of-type(2n) {
   text-align: right;
-=======
-
+}
 
 /***************************************************************************/
 /*      LEGEND                                                             */
@@ -1814,5 +1810,4 @@ footer a {
 
 .store-hours h4:nth-of-type(2n) {
   text-align: right;
->>>>>>> 065fc8302e72840e42a1e7d5342887cdac8978c7
 }
